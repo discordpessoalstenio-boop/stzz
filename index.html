@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>STZZ.DEV | Desenvolvimento de Sites Premium</title>
+    <meta name="description" content="STZZ.DEV — sites personalizados, landing pages, portfólios, lojas virtuais e sites empresariais com design premium, animações e alta performance." />
+    <meta name="theme-color" content="#000000" />
+    <meta property="og:title" content="STZZ.DEV | Não criamos apenas sites." />
+    <meta property="og:description" content="Criamos experiências digitais. Sites modernos, rápidos e responsivos." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preload" as="image" href="/brand/s-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      html,body{background:#000;margin:0}
+      #boot{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:#000;transition:opacity .6s ease}
+      #boot.is-hidden{opacity:0;pointer-events:none}
+      #boot .ring{width:56px;height:56px;border-radius:50%;border:1px solid rgba(192,192,192,.15);border-top-color:#e8e8e8;animation:bootspin 1s linear infinite}
+      #boot p{margin:18px 0 0;font:500 10px/1 system-ui,sans-serif;letter-spacing:.5em;color:#8a8a8a;text-align:center}
+      @keyframes bootspin{to{transform:rotate(360deg)}}
+      @media (prefers-reduced-motion:reduce){#boot .ring{animation:none}}
+    </style>
+  </head>
+  <body>
+    <div id="boot" aria-hidden="true"><div><div class="ring"></div><p>STZZ.DEV</p></div></div>
+
+    <!-- Formulário estático para o Netlify Forms detectar os campos no deploy. Não remova. -->
+    <form name="orcamento" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="nome" />
+      <input type="text" name="contato" />
+      <select name="tipo"></select>
+      <select name="orcamento"></select>
+      <textarea name="descricao"></textarea>
+      <input name="bot-field" />
+    </form>
+
+    <noscript><p style="color:#c0c0c0;font-family:sans-serif;padding:2rem">Ative o JavaScript para ver a experiência completa da STZZ.DEV. Instagram: <a style="color:#fff" href="https://www.instagram.com/stzz.dev/">@stzz.dev</a></p></noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
